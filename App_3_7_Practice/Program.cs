@@ -6,18 +6,20 @@ namespace App_3_7_Practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your name?");
-            var name = Console.ReadLine();
+            var (name, age) = ("Антон", 30);
+            Console.WriteLine("{0}", name);
+            Console.WriteLine("{0}", age);
 
-            Console.WriteLine("How old are you?");
-            var age = Convert.ToInt32(Console.ReadLine());
+            (string name_input, int age_input) anketa;
 
-            Console.WriteLine("What is your birthdate?");
-            var birthdate = Console.ReadLine();
+            Console.WriteLine("Введите ваше имя: ");
+            anketa.name_input = Console.ReadLine();
 
-            Console.WriteLine("Hello {0}, you're {1} years old, your birthdate is {2}", name, age, birthdate);
+            Console.WriteLine("Введите ваш возраст цифрами: ");
+            anketa.age_input = Convert.ToInt32(Console.ReadLine());
 
-            Console.ReadKey();
+            Console.WriteLine("Ваше имя {0}, ваш возраст цифрами {1}", anketa.name_input, anketa.age_input);
+            
         }
     }
 }
